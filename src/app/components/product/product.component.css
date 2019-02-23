@@ -30,6 +30,7 @@
     color: #00c1ff;
     font-weight: 600;
     cursor: pointer;
+    font-size: 12px;
 }
 .product-cart-info__readmore a:hover {
    text-decoration: underline; 
@@ -38,7 +39,7 @@
 .product-cart__button {
     margin-bottom: 0;
     padding-left: 0;
-    font-size: 12px;;
+    font-size: 12px;
 }
 .btn-fluid {
     width: 100%;
@@ -46,7 +47,7 @@
 }
 
 .product-cart-info__genre {
-   font-size: 14px;
+   font-size: 11px;
 
 }
 

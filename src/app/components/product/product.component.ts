@@ -17,7 +17,7 @@ import { Component, OnInit, Input } from '@angular/core';
             <a href="{{product.shopUrl}}">Подробнее</a>
           </p>
           <p class="product-cart__button">
-            <button href="#" class="pure-button pure-button-primary btn-fluid">Попробовать</button>
+            <button href="#" class="pure-button pure-button-primary btn-fluid">{{product.price}} рублей</button>
           </p>
           
         </div> 
