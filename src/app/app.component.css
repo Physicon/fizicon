@@ -1,0 +1,8 @@
+h1, p {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+h1 {
+    font-weight: 300;
+    font-size: 32px;
+    color: #3c3c3b;  
+}
