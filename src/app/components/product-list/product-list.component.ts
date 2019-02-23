@@ -6,13 +6,14 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
   selector: 'app-product-list',
   template: `
     <div class="container">
-      <form>
-        <label for="radio-block"> Показать цены в: </label>
-        <div id="radio-block">
-          <input name="currency" type="radio" [(ngModel)]="currency" value="rubles" /> Рублях
-          <input name="currency" type="radio" [(ngModel)]="currency" value="bonus"/> Бонусах
-        </div>
-      </form>  
+      <div class="pure-g" >  
+        <form class="currency-form">
+          <div class="pure-u-1"> Показать цены:
+            <input name="currency" type="radio" [(ngModel)]="currency" value="rubles" /> Рубли
+            <input name="currency" type="radio" [(ngModel)]="currency" value="bonus"/> Бонусы
+          </div>
+        </form>
+      </div>
       <div class="pure-g">
           <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5" 
               *ngFor="let item of product_list?.getAll()"> 
