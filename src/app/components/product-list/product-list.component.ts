@@ -9,16 +9,12 @@ import * as _ from 'lodash';
 @Component({
   selector: 'app-product-list',
   template: `
-  <div class="container">
-    <div class="row">
-      <div class="product-line"  *ngFor="let row of product_rows" >
-        <div class="product" *ngFor="let item of row"> 
-            <app-product  [product]="item"></app-product>
-        </div>
+      <div class="pure-g">
+          <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5" 
+              *ngFor="let item of product_list?.getAll()"> 
+              <app-product [product]="item"></app-product>
+          </div>
       </div>
-    </div>
-  </div>
-    
   `,
   styleUrls: ['./product-list.component.css']
 })
@@ -34,7 +30,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.storageService.getAllCourcesFromAPI().subscribe(data => {
       this.product_list = data;
-      this.product_rows = _.chunk(data.getAll(), 5);
+      // this.product_rows = _.chunk(data.getAll(), 5);
     });
   }
 }

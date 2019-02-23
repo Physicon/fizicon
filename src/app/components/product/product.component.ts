@@ -5,10 +5,23 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-product',
   template: `
     <div>
-      <div>
-        <img class="product-cart__image" src="{{product.getPictureUrl()}}">
-      </div>  
-      {{product | json}}
+      <div class="product-cart">
+        <div class="product-cart__image">  
+          <img src="{{product.getPictureUrl()}}">
+        </div> 
+        <div class="product-cart-info">
+          <p class="product-cart-info__title">{{product.subject}}</p>
+          <p class="product-cart-info__grade">{{product.grade}} класс</p>
+          <p class="product-cart-info__genre">{{product.genre}}</p>
+          <p class="product-cart-info__readmore">
+            <a href="{{product.shopUrl}}">Подробнее</a>
+          </p>
+          <p class="product-cart__button">
+            <button href="#" class="pure-button pure-button-primary btn-fluid">Попробовать</button>
+          </p>
+          
+        </div> 
+
     </div>
   `,
   styleUrls: ['./product.component.css']
