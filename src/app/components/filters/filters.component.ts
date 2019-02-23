@@ -27,7 +27,7 @@ import { getLocaleExtraDayPeriodRules } from '@angular/common';
             </select>
           </div>
           <div class="pure-u-1 pure-u-md-1 pure-u-lg-1-4">
-            <input class="pure-input-1" type="text" placeholder="Поиск">
+            <input class="pure-input-1" type="text" placeholder="Поиск"/>
           </div>
         </div>  
       </form>

@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   grades;
   subjects;
   genres;
+  bonus_mode = false;
 
   constructor(private storageService: StorageService) {
   }

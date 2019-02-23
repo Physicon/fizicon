@@ -23,4 +23,13 @@ export class Product {
     getPictureUrl() {
         return `https://www.imumk.ru/svc/coursecover/${this.courseId}`
     }
+
+    getPriceTag(currency) {
+        if (currency === 'rubles') {
+            return this.price + ' рублей';
+        }
+        if (currency === 'bonus') {
+            return this.priceBonus + ' бонусов';
+        }
+    }
 }

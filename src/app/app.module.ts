@@ -7,6 +7,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { StorageService } from './services/storage.service';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
   imports: [
     CommonModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     HttpClient,

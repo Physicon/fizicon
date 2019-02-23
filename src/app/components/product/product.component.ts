@@ -1,6 +1,7 @@
 import { Product } from './../../models/product';
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-product',
   template: `
@@ -17,7 +18,7 @@ import { Component, OnInit, Input } from '@angular/core';
             <a href="{{product.shopUrl}}">Подробнее</a>
           </p>
           <p class="product-cart__button">
-            <button href="#" class="pure-button pure-button-primary btn-fluid">{{product.price}} рублей</button>
+            <button href="#" class="pure-button pure-button-primary btn-fluid">{{product.getPriceTag(currency)}}</button>
           </p>
           
         </div> 
@@ -29,6 +30,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   @Input() product: Product;
+  @Input() currency;
 
   constructor() { }
 
