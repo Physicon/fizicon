@@ -26,4 +26,8 @@ export class AppComponent implements OnInit {
       this.genres = data.getGenres();
     });
   }
+
+  handleFilters(filters) {
+    console.log(filters);
+  }
 }

@@ -1,6 +1,3 @@
-.pure-g {
-    box-sizing: border-box;
-}
 .filter-form-select {
     padding: 0 0 15px 20px;
 }
@@ -21,15 +18,5 @@ input.filter-form__input {
     border: 1px solid #706f6f;
     border-radius: 6px;
     box-shadow: none;
-    /* display: inline-block; */
-}
-.pure-button {
-    background: rgb(255, 255, 255, 0);
-    display: inline-block;
-    margin-left: 6px;
 
 }
-
-/* .filter-form-search {
-    display: inline;
-} */
