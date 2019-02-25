@@ -1,0 +1,35 @@
+.pure-g {
+    box-sizing: border-box;
+}
+.filter-form-select {
+    padding: 0 0 15px 20px;
+}
+select.filter-form__select {
+    padding: .3em .5em;
+    height: 2.3em;
+    background-color: #fff;
+    border: 1px solid #706f6f;
+    border-radius: 6px;
+    box-shadow: none;
+
+}
+
+input.filter-form__input {
+    padding: .3em .5em;
+    height: 2.3em;
+    background-color: #fff;
+    border: 1px solid #706f6f;
+    border-radius: 6px;
+    box-shadow: none;
+    /* display: inline-block; */
+}
+.pure-button {
+    background: rgb(255, 255, 255, 0);
+    display: inline-block;
+    margin-left: 6px;
+
+}
+
+/* .filter-form-search {
+    display: inline;
+} */
