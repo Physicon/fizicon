@@ -2,3 +2,22 @@
    margin: 0 0 0 auto;
    block-size: 100%;
 }
+
+.currency-form__radio {
+   display: none
+}
+
+input[type="radio"]:checked + label{
+   color: #ffffff;
+   background: #00c1ff;
+}
+
+.currency-form__label {
+   display: inline-block;
+   border: 1px solid #00c1ff;
+   color: #00c1ff;
+   padding: 0.3rem 1rem 0.3rem 1rem;
+   margin: 1rem;
+   cursor: pointer;
+}
+

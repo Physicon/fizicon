@@ -1,6 +1,5 @@
 import { ProductList } from '../../models/product-list';
-import { StorageService } from '../../services/storage.service';
-import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
@@ -8,9 +7,11 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
     <div class="container">
       <div class="pure-g" >  
         <form class="currency-form">
-          <div class="pure-u-1"> Показать цены:
-            <input name="currency" type="radio" [(ngModel)]="currency" value="rubles" /> Рубли
-            <input name="currency" type="radio" [(ngModel)]="currency" value="bonus"/> Бонусы
+          <div class="pure-u-1">
+            <input name="currency" id="rubles" class="currency-form__radio" type="radio" [(ngModel)]="currency" value="rubles"/>
+              <label class="currency-form__label" for="rubles"> Рубли </label>
+            <input name="currency" id="bonus" class="currency-form__radio" type="radio" [(ngModel)]="currency" value="bonus"/>
+              <label class="currency-form__label" for="bonus"> Бонусы </label>
           </div>
         </form>
       </div>
