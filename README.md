@@ -1,27 +1,49 @@
-# Fizcon
+# Тестовое задание для компании ФИЗИКОН на вакансию «Разработчик javascript/frontend»
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+Описание задания.
 
-## Development server
+Необходимо выполнить нижеследующее задание, допустимо использование любых библиотек или фреймворков.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Имеется следующий метод API:
+POST http://krapipl.imumk.ru:8082/api/mobilev1/update
+в теле запроса передается объект json
+{'data':''}
 
-## Code scaffolding
+Возвращается результат вида:
+```
+{
+    "items": [
+        {
+            "courseId": "105",
+            "extId": "Physicon_IMUMK_Course_285524",
+            "courseHash": "191153621289246190966820186118178188200176110202548",
+            "title": "Задачник по биологии, демо-версия",
+            "grade": "8;9;10;11",
+            "genre": "Задачник",
+            "subject": "Биология",
+            "itunes_id": "ru.physicon.imumk.Physicon_IMUMK_Course_285524",
+            "progress": 0,
+            "description": "Задачник по биологии, демо-версия",
+            "status": "demo",
+            "price": 100,
+            "shopUrl": null,
+            "google_id": "ru.fizikon.physicon_imumk_course_285524",
+            "winstore_id": null,
+            "isNew": false,
+            "priceBonus": 5000
+        }, …
+   ],
+    "result": "Ok",
+    "errorMessage": null
+}
+```
+Необходимо собрать аналог витрины https://imumk.ru/showcase,
+т.е. страницу с плашками и фильтрами по предмету, классу, жанру, поиском по названию.
+Верстка «резиновая», внешний вид плашек полностью идентичен приведенному на странице.
+На кнопке «Попробовать» вместо надписи «Попробовать» вывести цену в рублях из поля price.
+Дополнительно разместить на странице переключатель «рубли/бонусы», выводить соответственно цену в рублях или бонусах.
+Витрина должна получать данные асинхронно, фильтрацию осуществлять на клиенте.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Недостающие данные получить методом наблюдения или из html-кода страницы.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Код выложить на гитхаб, страницу опубликовать на GitHub Pages.
