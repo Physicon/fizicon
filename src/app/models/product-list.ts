@@ -42,7 +42,7 @@ export class ProductList {
     }
 
     getSubjects() {
-        const subjects = this.filtered_list.value.map(item => item.subject);
+        const subjects = this.full_list.map(item => item.subject);
         return [...new Set(subjects)].sort();
     }
 
