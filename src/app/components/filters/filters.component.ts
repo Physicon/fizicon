@@ -43,10 +43,10 @@ export class FiltersComponent implements OnInit {
   @Output() event = new EventEmitter();
 
 
-  private subject_input = "";
-  private genre_input = "";
-  private grade_input = "";
-  private search_input = "";
+  subject_input = "";
+  genre_input = "";
+  grade_input = "";
+  search_input = "";
 
   constructor() { }
 
