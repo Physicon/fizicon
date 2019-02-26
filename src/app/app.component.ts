@@ -34,7 +34,6 @@ export class AppComponent implements OnInit, OnDestroy {
         this.genres = this.product_list_manager.getGenres();
         this.grades = this.product_list_manager.getGrades();
       });
-
   }
 
   handleFilters(filters) {

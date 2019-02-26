@@ -4,7 +4,6 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-product-list',
   template: `
-    
       <div class="pure-g" >  
         <form>
           <div class="currency-control pure-u-1">
@@ -21,7 +20,6 @@ import { Component, OnInit, Input } from '@angular/core';
               <app-product [product]="item" [currency]="currency"></app-product>
           </div>
       </div>
- 
   `,
   styleUrls: ['./product-list.component.css']
 })
