@@ -25,7 +25,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
             </select>
           </div>
           <div class="filter-form-select filter-form-search pure-u-1 pure-u-md-1 pure-u-lg-1-4">
-            <input class="filter-form__input pure-input-1"  [(ngModel)]="search_input" (change)="changeHandle()" name="search" type="text" placeholder="Поиск">
+            <input class="filter-form__input pure-input-1"  [(ngModel)]="search_input" (keyup)="changeHandle()" name="search" type="text" placeholder="Поиск">
          </div>
         
         </div>  
@@ -54,12 +54,12 @@ export class FiltersComponent implements OnInit {
   }
 
   changeHandle() {
-    this.event.emit({
-      subject: this.subject_input,
-      genre: this.genre_input,
-      grade: this.grade_input,
-      search: this.search_input
-    });
+    this.event.emit([
+      { param: 'subject', value: this.subject_input },
+      { param: 'genre', value: this.genre_input },
+      { param: 'grade', value: this.grade_input },
+      { param: 'search', value: this.search_input }
+    ]);
   }
 
 }

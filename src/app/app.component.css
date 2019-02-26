@@ -3,6 +3,11 @@ html {
 }
 h1 {
     font-weight: 300;
-    font-size: 32px;
-    color: #3c3c3b;  
+    color: #3c3c3b;
+    font-size: 36px;  
+}
+
+div.showcase-title {
+    text-align: center !important;
+    margin: 2em;
 }

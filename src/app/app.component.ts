@@ -1,15 +1,19 @@
-import { ProductList } from './models/product-list';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { StorageService } from './services/storage.service';
+import { mergeMap } from 'rxjs/operators';
+import { ProductList } from './models/product-list';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
-  product_list: ProductList;
+  private subscribtion;
+  product_list_manager: ProductList;
+
+  product_list;
   grades;
   subjects;
   genres;
@@ -19,15 +23,25 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.storageService.getAllCourcesFromAPI().subscribe(data => {
-      this.product_list = data;
-      this.grades = data.getGrades();
-      this.subjects = data.getSubjects();
-      this.genres = data.getGenres();
-    });
+    this.subscribtion = this.storageService.getAllCourcesFromAPI()
+      .pipe(mergeMap(data => {
+        this.product_list_manager = data;
+        return this.product_list_manager.getProductListSream()
+      }))
+      .subscribe(data => {
+        this.product_list = data;
+        this.subjects = this.product_list_manager.getSubjects();
+        this.genres = this.product_list_manager.getGenres();
+        this.grades = this.product_list_manager.getGrades();
+      });
+
   }
 
   handleFilters(filters) {
-    console.log(filters);
+    this.product_list_manager.filter(filters);
+  }
+
+  ngOnDestroy() {
+    this.subscribtion.unsubscribe();
   }
 }
