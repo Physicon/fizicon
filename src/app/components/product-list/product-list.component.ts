@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-product-list',
   template: `
-      <div class="pure-g" >  
+      <div class="pure-g" >
         <form>
           <div class="currency-control pure-u-1">
             <input name="currency" id="rubles" class="currency-form__radio" type="radio" [(ngModel)]="currency" value="rubles">
@@ -14,9 +14,9 @@ import { Component, OnInit, Input } from '@angular/core';
           </div>
         </form>
       </div>
-      <div class="pure-g">
-          <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5" 
-              *ngFor="let item of product_list"> 
+      <div class="pure-g product-list">
+          <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-5"
+              *ngFor="let item of product_list">
               <app-product [product]="item" [currency]="currency"></app-product>
           </div>
       </div>
